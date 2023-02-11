@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        ul{
+            margin:0;
+            padding:0;
+            list-style: none;
+        }
+
+    </style>
+</head>
+<body>
+    <form>
+        <h2>Edit your preferences</h2>
+        <ul>
+          <li>
+            <label for="e-mail">Email</label>
+            <div>
+                <input type="email" name="e-mail">
+            </div>
+          </li>
+          <li>
+            <label for="website">Website</label>
+            <div>
+                <input type="url" name="website">
+            </div>
+          </li>
+          <li>
+            <label for="phone">Phone number</label>
+            <div><input type="tel" name="phone"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="000-000-0000"></div>
+          </li>
+          <li>
+            <label for="fave-color">Favorite color</label>
+            <div><input type="color" value="#FFFFFF"></div>
+          </li>
+          <li>
+            <button>Update preferences</button>
+          </li>
+        </ul>
+      </form>
+          
+</body>
+</html>

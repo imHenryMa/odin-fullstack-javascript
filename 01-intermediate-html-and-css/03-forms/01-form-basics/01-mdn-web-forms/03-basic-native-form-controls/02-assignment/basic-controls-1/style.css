@@ -1,0 +1,7 @@
+li {
+    margin: calc(4rem/16);
+}
+
+ul {
+    list-style: none;
+}
