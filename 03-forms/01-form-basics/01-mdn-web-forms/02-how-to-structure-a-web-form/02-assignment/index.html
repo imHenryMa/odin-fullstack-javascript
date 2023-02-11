@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Form structure: Task 1</title>
+    <style>
+      body {
+        background-color: #fff;
+        color: #333;
+        font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
+        padding: 1em;
+        margin: 0;
+      }
+
+      form{
+        width: 400px;
+        border: 1px solid #999;
+        padding: 10px;
+        border-radius: 10px;
+      }
+
+      legend{
+        padding:0;
+      }
+
+      fieldset{
+        border-radius: 5px;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      li+li{
+        margin: calc(3rem/16) auto;
+      }
+      * {
+        box-sizing: border-box;
+      }
+
+      h3{
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+
+      legend{
+        font-weight: bold;
+      }
+
+      .button-container{
+        display: flex;
+        padding: 10px;
+        gap: 5px;
+        justify-content: center;
+        align-content:center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form>
+        <h3>Form details</h3>
+        <fieldset>
+            <legend>Personal details</legend>
+            <ul>
+                <li>
+                    <label for="name">
+                        Name:
+                    </label>
+                </li>
+                <li>
+                    <input type="text" id="name" name="name">
+                </li>
+                <li>
+                    <label for="age">
+                        Age:
+                    </label>
+                </li>
+                <li>
+                    <input type="number" id="age" name="age">
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>Comment information</legend>
+            <ul>
+                <li>
+                    <label for="comment">
+                        Comment:
+                    </label>
+                </li>
+                <li>
+                    <input type="text" id="comment" name="comment">
+                </li>
+                <li>
+                    <label for="email">Email:</label>
+                </li>
+                <li>
+                    <input type="email" id="email" name="email">
+                </li>
+            </ul>
+        </fieldset>
+        <div class="button-container">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+  </body>
+
+</html>
