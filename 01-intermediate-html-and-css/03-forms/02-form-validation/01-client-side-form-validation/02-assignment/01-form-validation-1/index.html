@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Form validation: Task 1</title>
+    <style>
+      body {
+        background-color: #fff;
+        color: #333;
+        font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
+        padding: 1em;
+        margin: 0;
+      }
+
+      textarea+span,
+      input+span{
+        position:relative;
+      }
+
+      span[aria-label="required"],
+      textarea:required+span::after,
+      input:required+span::after{
+        font-size: 1rem;
+        position: absolute;
+        content: "*";
+        color: red;
+        padding: 1px 1px;
+        transition: all 0.5s;
+      }
+
+      textarea:valid+span::after,
+      input:valid+span::after{
+        font-size: 1rem;
+        position: absolute;
+        content: "Good!";
+        color: green;
+        padding: 1px 1px;
+        transition: all 0.5s;
+      }
+
+      div{
+        width: 200px;
+        display:flex;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form>
+      <h2>Enter your support query</h2>
+      <p>Required content are labelled with:<span aria-label="required">*</span></p>
+      <ul>
+        <li>
+          <label for="uname">User name:</label>
+          <div><input type="text" name="uname" id="uname" minlength="5" maxlength="20" required>
+          <span></span>
+          </div>
+          
+        </li>
+        <li>
+          <label for="email">Email address:</label>
+          <div><input type="email" name="email" id="email" required><span></span></div>
+        </li>
+        <li>
+          <label for="phone">Phone number:</label>
+          <div>
+            <input type="tel" name="phone" id="phone" maxlength="15" pattern="^(\+[0-9]+[- ])?[0-9]{3}[- ]?[0-9]{3}[- ]?[0-9]{4}$" required>
+            <span></span>
+          </div>
+        </li>
+        <li>
+          <label for="comment">Comment:</label>
+          <div><textarea name="comment" id="comment" maxlength="200" required></textarea><span></span></div>
+        </li>
+        <li>
+          <button>Submit comment</button>
+        </li>
+      </ul>
+    </form>
+  </body>
+
+</html>
